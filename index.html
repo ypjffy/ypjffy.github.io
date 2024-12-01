@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的樊飞燕</title>
+    <title>这是一封给樊飞燕的信</title>
     <style>
         body {
             display: flex;
@@ -13,25 +13,48 @@
             margin: 0;
             padding: 0;
         }
-     .container {
-            max-width: 600px;
+        
+       .container {
+            width: 600px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-width: 600px; /* 确保最小宽度为600px */
+            max-width: 600px; /* 确保最大宽度为600px */
+            display: none; /* 初始隐藏内容 */
+        }
+       .envelope {
+       
+           
+            width: 200px;
+            height: 300px;
+            background-color: #ffcc00;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .envelope p {
+            display: block;
+            font-family: cursive; font-size: 18px; color: #8B0000;
+           
+            padding: 10px 10px;
+            border: 1px solid #8B0000; /* 添加边框线 */
+            position: relative;
+        }
+        .envelope p:after {
+            content: "♥";
+            position: absolute;
+            bottom: -100px; /* 调整爱心的位置 */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 90px; /* 调整爱心的大小 */
+            color: #8B0000;
         }
         h1 {
             color: #333;
             font-size: 36px;
             margin-top: 0;
-            animation: fadeIn 1s ease-in-out;
-        }
-        p {
-            color: #666;
-            font-size: 18px;
-            line-height: 1.5;
-            margin: 20px 0;
             animation: fadeIn 1s ease-in-out;
         }
         @keyframes fadeIn {
@@ -44,36 +67,28 @@
                 transform: translateY(0);
             }
         }
-        .container img {
-            max-width: 100%;
+       .container img {
+            max-width: 75%;
             border-radius: 10px;
             margin-top: 20px;
             animation: fadeIn 1s ease-in-out;
         }
-        .left img{
+       .left img{
             width: 100px;
             height: 100px;
         }
-        .right img{
+       .right img{
             width: 100px;
             height: 100px;
         }
     </style>
 </head>
 <body>
-    <div class="left">
- <!-- 在这里插入左边的6张图片 -->
- <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片1">
- <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片2">
- <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片3">
- <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片4">
- <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片5">
- <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片6">
-
-    </div>
-
-
-    <div class="container">
+    <div class="envelope" id="envelope"> <p>我是一只迷失在爱的海洋中的小船，
+        渴望着你的指引和拥抱。
+        亲爱的燕子，请你轻轻地打我，
+        让我感受到你的存在和温暖。</p></div>
+    <div class="container" id="container">
         <h1>亲爱的燕子</h1>
         <p>我不知道怎么说，但我想告诉你，你对我来说非常特别。</p>
         <p>我喜欢你的笑容，喜欢你的眼睛，喜欢你的一切。</p>
@@ -81,18 +96,25 @@
         <p>你是我生命中的阳光，照亮了我的每一天。</p>
         <p>我希望你能给我一个机会，让我成为你生命中的那个人。</p>
         <p>사랑해요，Ms. Fan。</p>
-        <img src="https://github.com/ypjffy/ypjffy.github.io/blob/main/a18240fcb29268502ae775aa6aa00d6.jpg" alt="樊飞燕的照片">
+        <img src="
+        
+
+        https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/0319bfddc69cf06c4fe48b412bb6a11.jpg" alt="樊飞燕的照片">
     </div>
- <div class="right">
-         <!-- 在这里插入左边的6张图片 -->
-         <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片1">
-         <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片2">
-         <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片3">
-         <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片4">
-         <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片5">
-         <img src="https://web-tlias-xiaofeifei.oss-cn-hangzhou.aliyuncs.com/1.jpg" alt="图片6">
-     
-    </div>
+    <script>
+        // 获取信封和内容容器的元素
+        const envelope = document.getElementById('envelope');
+        const container = document.getElementById('container');
+
+        // 监听信封的点击事件
+        envelope.addEventListener('click', function() {
+            // 切换内容容器的显示状态
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
-
