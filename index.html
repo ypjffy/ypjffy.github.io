@@ -6,6 +6,7 @@
     <title>我的樊飞燕</title>
     <style>
         body {
+            display: flex;
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f0f0f0;
@@ -14,7 +15,7 @@
         }
      .container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
@@ -43,15 +44,28 @@
                 transform: translateY(0);
             }
         }
-        img {
+        .container img {
             max-width: 100%;
             border-radius: 10px;
             margin-top: 20px;
             animation: fadeIn 1s ease-in-out;
         }
+        .left img{
+            width: 100px;
+            height: 100px;
+        }
+        .right img{
+            width: 100px;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
+    <div class="left">
+<img src="./JPG/小飞飞.jpg" alt="">
+    </div>
+
+
     <div class="container">
         <h1>亲爱的燕子</h1>
         <p>我不知道怎么说，但我想告诉你，你对我来说非常特别。</p>
@@ -61,6 +75,9 @@
         <p>我希望你能给我一个机会，让我成为你生命中的那个人。</p>
         <p>사랑해요，Ms. Fan。</p>
         <img src="./JPG/姐姐.jpg" alt="樊飞燕的照片">
+    </div>
+    <div class="right">
+        <img src="./JPG/女神.jpg" alt="">
     </div>
 </body>
 </html>
